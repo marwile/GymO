@@ -1,0 +1,42 @@
+//
+// sass file
+// dt173g projekt
+// php rest webb service 
+// maria ågren 2018
+//
+
+
+@import "colors"; //import variables for color etc
+//@import "list";  //import mixin list
+//@import "button";  //import button
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color:$blue;
+}
+.wrapper{
+    display:flex;
+    
+   
+}
+.blue{
+    width:50%;
+   
+    float:left;
+    margin:0;
+}
+.pink{
+    width:50%;
+    background-color:$pink;
+    margin:0;
+    float:right;
+   
+}
+footer{
+    background-color:$black;
+}

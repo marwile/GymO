@@ -1,0 +1,34 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #5062D6;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blue {
+  width: 50%;
+  float: left;
+  margin: 0;
+}
+
+.pink {
+  width: 50%;
+  background-color: #BA62A2;
+  margin: 0;
+  float: right;
+}
+
+footer {
+  background-color: #252527;
+}
+/*# sourceMappingURL=style.css.map */
