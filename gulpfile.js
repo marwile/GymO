@@ -15,7 +15,10 @@ const concatCss = require("gulp-concat-css");
 //compress images 
 const compress =require("gulp-imagemin");
 
-//concat vet inte om det behövs eller blir det bara en
+//copy php
+
+
+
 //sass compiler and minifyer 
 gulp.task("sass", function(){
     return gulp.src("src/sass/*.scss")
@@ -30,6 +33,13 @@ gulp.task("copyhtml", function(){
     return gulp.src("src/*.html")
     .pipe(gulp.dest("pub"));
 });
+
+//copy php files to pub
+gulp.task("copyphp", function(){
+    return gulp.src("src/*.php")
+    .pipe(gulp.dest("pub"));
+});
+
 //compress images and copy images from src to pub
 gulp.task("convertimages", function(){
     return gulp.src("src/images/*")
@@ -37,21 +47,24 @@ gulp.task("convertimages", function(){
     .pipe(gulp.dest("pub/images"))
 });
 
+//copy js files to pub
+gulp.task("copyjs", function(){
+    return gulp.src("src/js/*.js")
+    .pipe(gulp.dest("pub/js"))
+
+});
+
 //watch changes
 gulp.task("watcher",function(){
     gulp.watch("src/sass/*.scss", ["sass"]);
     gulp.watch("src/*.html", ["copyhtml"]);
     gulp.watch("src/images/*", ["convertimages"]);
+    gulp.watch("src/js/*.js", ["copyjs"]);
+    gulp.watch("src/*.php", ["copyphp"]);
 
 });
 
 
 //default gulp
-gulp.task("default", [ "sass", "copyhtml", "convertimages","watcher"]);
+gulp.task("default", [ "sass", "copyhtml", "copyjs", "copyphp","convertimages","watcher"]);
 
-/*, "convertjs"
-
-
-gulp.watch("src/js/*.js", ["convertjs"]);
-
-*/

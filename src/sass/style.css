@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #5062D6;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -19,6 +20,7 @@ body {
   width: 50%;
   float: left;
   margin: 0;
+  padding: 2em;
 }
 
 .pink {
@@ -26,9 +28,136 @@ body {
   background-color: #BA62A2;
   margin: 0;
   float: right;
+  padding: 2em;
+}
+
+.pepp {
+  font-family: 'Kalam', cursive;
+  color: #1a4418;
+  font-size: 2.5em;
+}
+
+.minutes {
+  font-family: 'Kalam', cursive;
+}
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  margin-top: 1.3em;
+  font-size: 3em;
+  font-weight: bold;
+  color: #f0f0f3;
+  font-family: 'Kalam', cursive;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f0f0f3;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 1.5em;
+  color: #f0f0f3;
+}
+
+#all {
+  background-color: #afe2ad;
+  border: 3px solid #3e3e41;
+}
+
+.head {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3e3e41;
+  padding: 0.3em;
+  text-align: left;
+}
+
+tr {
+  padding: 0.3em;
+}
+
+#add {
+  background-color: #afe2ad;
+  margin: 1.5em 0em;
+  padding: 0em 0.3em 0 0.3em;
+  border-radius: 4px;
+  -webkit-box-shadow: 3px 6px #3e3e41;
+          box-shadow: 3px 6px #3e3e41;
+  font-family: 'Kalam', cursive;
+  color: #3e3e41;
+  width: 150px;
+  font-size: 2em;
+}
+
+#add:hover {
+  background-color: #65c762;
+}
+
+input[type=number] {
+  color: #707075;
+  font-size: 2em;
+  width: 150px;
+  padding: 0.2em;
+  border: solid 3px #3e3e41;
+  border-radius: 4px;
+  background-color: #f0f0f3;
+  font-family: 'Kalam', cursive;
+  color: #3e3e41;
+}
+
+input[type=number]:focus {
+  background-color: #d9a9cc;
 }
 
 footer {
   background-color: #252527;
+}
+
+.footer-div {
+  padding: 2em;
+}
+
+.footer-div p {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 945px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    display: block;
+    width: 100%;
+  }
+  .blue {
+    width: 100%;
+    background-color: #5062D6;
+    margin: 0;
+    padding: 1em;
+  }
+  .pink {
+    width: 100%;
+    background-color: #BA62A2;
+    margin: 0;
+    padding: 1em;
+  }
+  #logo {
+    max-width: 90%;
+  }
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

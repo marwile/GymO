@@ -1,4 +1,5 @@
-//
+// 
+// gymo
 // sass file
 // dt173g projekt
 // php rest webb service 
@@ -7,36 +8,159 @@
 
 
 @import "colors"; //import variables for color etc
-//@import "list";  //import mixin list
-//@import "button";  //import button
 
-*{
+@import "button";  //import button
+
+* {
     box-sizing:border-box;
 }
+
 
 body{
     margin:0;
     padding:0;
     background-color:$blue;
+    font-family: 'Open Sans', sans-serif;
 }
+//wrappers 
 .wrapper{
     display:flex;
-    
-   
 }
 .blue{
-    width:50%;
-   
+    width:50%;   
     float:left;
     margin:0;
+    padding:2em;
 }
 .pink{
     width:50%;
     background-color:$pink;
     margin:0;
     float:right;
-   
+    padding:2em;
 }
+.pepp{
+    font-family: 'Kalam', cursive;
+    color:darken($green, 35);
+    font-size:2.5em;
+}
+.minutes{
+    font-family: 'Kalam', cursive;
+}
+
+//headings
+#logo{
+    margin-left:auto;
+    margin-right:auto;
+
+}
+h1,h2{
+    margin-top:1.3em;
+    font-size:3em;
+    font-weight:bold;
+    color:$white;
+    font-family: 'Kalam', cursive;
+}
+h3{
+    font-size:1.5em;
+    font-weight:bold;
+    color:$white;
+    font-family:'Open Sans', sans-serif;
+}
+p{
+   font-size:1.5em;
+   color:$white;
+}
+//table
+
+#all{
+    background-color:lighten($green, 25);
+    border:3px solid $darkgrey;
+ 
+
+}
+
+.head{
+    font-size:1.2em;
+    font-weight:bold;
+    color:$darkgrey;
+    padding:0.3em;
+    text-align:left;
+}
+tr{
+    padding:0.3em;
+}
+
+//button
+#add{
+    @include button;
+    
+}
+#add:hover{
+    background-color:lighten($green,5);
+}
+
+//input field
+input[type=number]{
+    color:lighten($darkgrey,20);
+    font-size:2em;
+    width:150px;
+    padding:0.2em;
+    border:  solid 3px $darkgrey;
+    border-radius: 4px;
+    background-color:$white;
+    font-family: 'Kalam', cursive;
+    color:$darkgrey;
+}
+
+input[type=number]:focus{
+    background-color:lighten($pink, 20);
+}
+
 footer{
     background-color:$black;
+
+}
+   
+.footer-div{
+   padding:2em;
+    p{
+        font-size:0.7em;
+        text-align: center;   
+    }
+}
+
+//*****media queries smaller screens********************
+
+@media only screen and (max-width:945px){
+    body{
+        width:100%;
+        margin:0;
+        padding:0;
+       
+      }
+    .wrapper{
+        display: block;
+        width:100%; 
+    }
+    .blue{
+        width:100%;
+        background-color:$blue;
+        margin:0;
+        padding:1em;
+    }
+    .pink{
+        width:100%;
+        background-color:$pink;
+        margin:0;
+        padding:1em;
+    }
+    #logo{
+        max-width:90%;
+    }
+    footer{
+        width:100%;
+        margin:0;
+        padding:0;
+    }
 }

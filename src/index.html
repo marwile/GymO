@@ -1,33 +1,74 @@
+<!--
+//
+// gymo
+// html file
+// dt173g projekt
+// php rest webb service 
+// maria ågren 2018
+//
+// 
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GymO</title>
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="main.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
 </head>
 <body>
 <div class="wrapper">
     <div class="blue">
-        <img src="images/logo.png" alt="logga GymO">
+        <img id="logo" src="images/logo.png" alt="logga GymO">
 
+        <h2>Dagens träning:</h2>
+            <h3>Kondition: </h3>
 
-        <img src="images/o.png" alt="klocka">
+            <input type="number" id="endurance" placeholder="minuter" />  
+
+            <h3>Styrka: </h3>
+            <input type="number" id="strength" placeholder="minuter" /> <br>
+
+            <button id="add">Klart </button>
+
+            <h1> <img src="images/o.png" alt="klocka"> Kondition</h1> 
+
+                <p>Senaste konditions-träning:      </p>
+                <div id="minutes-endurance">
+                </div>
 
     </div>
 
     <div class="pink">
-            <img src="images/o-blue.png" alt="klocka">
+        <h1>   <img src="images/o-blue.png" alt="klocka">Styrka</h1>
+        <p>Senaste styrke-träning:      </p>
+            <div id="minutes-strength">
+            </div>
+
+        <h1>Senaste träningarna:</h1>
+        <div id="latest">
+        </div>
+
+
+        <h1>Alla gym-pass:</h1>
+            <table id="all"><th class="head">Kondition</th><th class="head">Styrka</th><th class="head">datum</th>
+            </table>
 
     </div>
 
 </div>
 <footer>
-
+    <div class="footer-div">
+        <p>REST Webbtjänst med PHP</p>
+        <p>Maria Ågren 	&#169; 2018</p>
+    </div>
 </footer>
 
-
-    
+<script src="js/main.js"></script>    
 </body>
 </html>
